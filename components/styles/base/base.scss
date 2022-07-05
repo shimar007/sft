@@ -1,0 +1,59 @@
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include font-size(1.8rem);
+    line-height: 1.278;
+    font-family: var(--font-source-sans-pro);
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    @include font-size(4.5rem);
+    font-weight: 600;   
+}
+
+h2 {
+    @include font-size(4rem);
+    font-weight: 600;
+}
+
+h3 {
+    @include font-size(3rem);
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+p {
+    color: var(--bs-dark);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    justify-content: space-between;
+
+    @include respond-to(large-desktop) {
+        max-width: 1160px;
+    }
+
+    @include respond-to(desktop) {
+        max-width: 960px;
+    }
+
+    @include respond-to(tablet) {
+        max-width: 720px;
+    }
+
+    @include respond-to(mobile-large) {
+        padding: 0 20px;
+    }
+}

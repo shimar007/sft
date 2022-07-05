@@ -1,0 +1,18 @@
+.main-content-body {
+    width: calc(75% - 20px);
+
+    .main-content-intro {
+        height: 100px;
+        background-color: var(--bs-info);
+        width: 100%;
+    }
+
+    .main-content-inner-body {
+        width: 100%;
+    }
+}
+
+.sidebar {
+    width: calc(25%);
+    background-color: var(--bs-light);
+}
