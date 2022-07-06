@@ -6,6 +6,7 @@ import $ from "jquery";
 //import axios
 const axios = require('axios').default;
 
+//get website url
 const website_url = window.location.href;
 
 document.addEventListener('DOMContentLoaded', function(event) {
