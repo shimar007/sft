@@ -25,6 +25,15 @@ function create_link_element(element) {
     inner_html += '<div class="latest-news-item-content-wrapper">';
     inner_html += '<div class="latest-news-title"><h3>'+element.Title+'</h3></div>';
     inner_html += '<div class="latest-news-description"><p>'+element.Intro+'</p></div>';
+    
+    //check if comments is greater than 0
+    if(parseInt(element.Comments) > 0) {
+        inner_html += '<div class="latest-news-published"><span class="published">'+element.Published+'</span><span class="comments">'+element.Comments+'</span></div>';
+    }
+    else {
+        inner_html += '<div class="latest-news-published"><span class="published">'+element.Published+'</span></div>'; 
+    }
+
     inner_html += '</div>';
     inner_html += '</div>';
     

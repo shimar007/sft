@@ -45,6 +45,10 @@ p {
         max-width: 1160px;
     }
 
+    @include respond-to(ipad) {
+        flex-direction: column;
+    }
+
     @include respond-to(desktop) {
         max-width: 960px;
     }
