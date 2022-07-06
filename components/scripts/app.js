@@ -6,6 +6,8 @@ import $ from "jquery";
 //import axios
 const axios = require('axios').default;
 
+const website_url = window.location.href;
+
 document.addEventListener('DOMContentLoaded', function(event) {
     
     //function call latest news
@@ -21,7 +23,7 @@ function create_link_element(element) {
 
     //create inner html element
     var inner_html = '<div class="latest-news-item-wrapper">';
-    inner_html += '<div class="latest-news-item-image" style="background-image: url(/'+element.Imageurl+')"></div>';
+    inner_html += '<div class="latest-news-item-image" style="background-image: url('+website_url+''+element.Imageurl+')"></div>';
     inner_html += '<div class="latest-news-item-content-wrapper">';
     inner_html += '<div class="latest-news-title"><h3>'+element.Title+'</h3></div>';
     inner_html += '<div class="latest-news-description"><p>'+element.Intro+'</p></div>';
@@ -48,7 +50,7 @@ function create_link_element(element) {
 function latest_news() {
     
     //axios call to get data
-    axios.get("/api/collection/collections-landing-page.json").then((response) => {
+    axios.get(""+website_url+"api/collection/collections-landing-page.json").then((response) => {
         
         //get response status
         var response_status = response.status;
